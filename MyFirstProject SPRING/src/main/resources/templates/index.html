@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    <h1 style="text-align: center; color: darkslategrey">Electronic shop items</h1>
+
+    <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 40px; max-width: 950px; margin: 0 auto">
+        <h2 th:each="iteam : ${goods}" style="text-align: center;background-color: #E8F4F8; padding: 20px; border-radius: 10px; margin-bottom: 20px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+            <span th:text="${iteam.getName()}" style="color: darkslateblue; font-size: 30px; display: block; margin-bottom: 10px; text-align: center"></span>
+            <span th:text="${iteam.getDescription()}" style="color: black; font-size: 15px; display: block; margin-bottom: 10px; text-align: center"></span>
+            <span th:text="${iteam.getPrice()} +'$'" style="color: darkgreen; font-size: 20px; display: block; margin-bottom: 10px; text-align: center"></span>
+            <button style="text-align: center; font-size: 17px; border: none; background-color: darkgreen; color: white; padding: 3px 7px; border-radius: 5px;">DETAILS</button>
+        </h2>
+
+    </div>
+
+
+</body>
+</html>
